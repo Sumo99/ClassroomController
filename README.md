@@ -8,4 +8,4 @@ Create a program that allows your user to control a classroom. Import both the C
 
 Other options should be provided to fit in with the other features of your classroom.
 
-Suggested Java project from [dreamincode.net](https://www.dreamincode.net/forums/topic/160458-simple-java-projects/ "Simple Java Projects")
+_Suggested Java project from [dreamincode.net](https://www.dreamincode.net/forums/topic/160458-simple-java-projects/ "Simple Java Projects")_
