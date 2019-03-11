@@ -1,3 +1,5 @@
+package classroomController;
+
 import java.io.InputStreamReader;
 import java.io.FileReader;
 import java.io.BufferedReader;
@@ -5,8 +7,10 @@ import java.io.IOException;
 import java.io.FileNotFoundException;
 
 /**
- *  @author Gary Litvin
+ *  from: http://www.skylit.com/javamethods-old/JM-Appendix-E.html
+ *  @author Gary Litvin (originally)
  *  @version 1.3, 3/30/06
+ *  modified 03/10/2019 by Carlos F. Meneses
  *
  *  Appendix to:
  * 
