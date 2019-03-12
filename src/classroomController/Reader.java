@@ -12,28 +12,28 @@ import java.util.Scanner;
  */
 
 class Reader {
-	private Scanner myScanner = new Scanner(System.in);
-	private String myString;
+	static private Scanner myScanner = new Scanner(System.in);
+	static private String myString = "test";
 
 	/**
 	 * @param args
 	 */
 	Reader() {
-		setMyString(myScanner.nextLine());
 	}
 
 	/**
 	 * @return the myString
 	 */
-	public String getMyString() {
+	static public String getMyString() {
+		myString = myScanner.nextLine();
 		return myString;
 	}
 
 	/**
 	 * @param myString the myString to set
 	 */
-	public void setMyString(String myString) {
-		this.myString = myString;
-	}
+	// public void setMyString(String myString) {
+	//	this.myString = myString;
+	//}
 
 }

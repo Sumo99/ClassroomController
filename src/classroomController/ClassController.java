@@ -17,7 +17,9 @@ class ClassController {
 	Classroom currentClassroom = new Classroom(0, 0);
 	
 	public static void main(String[] args) {
-		System.out.println("Hello World!");
+		System.out.print("Enter command: ");
+		String command = Reader.getMyString();
+		System.out.println("You entered: " + command);
 
 	}
 
