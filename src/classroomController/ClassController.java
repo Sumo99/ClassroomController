@@ -6,21 +6,52 @@ package classroomController;
 /**
  * @author carlosfmeneses
  * ClassController.java 
- * created 3/8/2019 | updated 3/10/2019
+ * created 3/8/2019 | updated 3/12/2019
  */
 
 class ClassController {
-
+	static int studentsMax = 10;
+	static int studentsQuantity = 0;
+	
+	static int lightsMax = 3;
+	static int lightsQuantity = 0;
+	
 	/**
 	 * @param args
 	 */
-	Classroom currentClassroom = new Classroom(0, 0);
-	
-	public static void main(String[] args) {
-		System.out.print("Enter command: ");
-		String command = Reader.getMyString();
-		System.out.println("You entered: " + command);
+	static Classroom currentClassroom = new Classroom(studentsMax, studentsQuantity, lightsMax, lightsQuantity);
 
+	public static void main(String[] args) {
+		menu();
+		}
+
+	private static void menu() {
+		studentsQuantity = currentClassroom.getStudentsQuantity();
+		lightsQuantity = currentClassroom.getLightsQuantity();
+		
+		System.out.print("Students: " + studentsQuantity + "/" + studentsMax 
+				+ "\n"
+				+ "Lights: " + lightsQuantity + "/" + lightsMax
+				+ "\n\n"
+				+ "(A) Add students \n" 
+				+ "(R) Remove students \n" 
+				+ "(L) Lights on \n" 
+				+ "(O) Lights off \n"
+				+ "\n");
+		commandSelection();
+	}
+
+	private static void commandSelection() {
+		System.out.print("Enter command: ");
+		String userCommand = Reader.getMyString();
+		System.out.println("Your command: " + userCommand + "\n");
+		commandInteger();
+	}
+
+	private static void commandInteger() {
+		System.out.print("Enter quantity: ");
+		int userQuantity = Reader.getMyInt();
+		System.out.println("Your quantity: " + userQuantity);
 	}
 
 }
