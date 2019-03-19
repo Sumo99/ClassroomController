@@ -34,7 +34,12 @@ class Reader {
 	 * @return the myInt
 	 */
 	static public int getMyInt() {
-		myInt = myScanner.nextInt();
+		myString = myScanner.nextLine();
+		for (int loop = 1; loop <= myString.length(); loop++) {
+			if (loop != 1) {
+				
+			}
+		}
 		return myInt;
 	}
 
