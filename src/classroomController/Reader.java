@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * @author carlosfmeneses
  * ClassController.java 
- * created 3/11/2019 | updated 3/12/2019
+ * created 3/11/2019 | updated 3/19/2019
  */
 
 class Reader {
@@ -34,14 +34,15 @@ class Reader {
 	 * @return the myInt
 	 */
 	static public int getMyInt() {
-		myString = myScanner.nextLine();
-		for (int loop = 1; loop <= myString.length(); loop++) {
-			if (loop != 1) {
-				
+		try (Scanner myScanner = new Scanner(System.in)) {
+			if (myScanner.hasNextInt()) {
+				myInt = myScanner.nextInt();
+			} else {
+				System.out.println("Invalid entry. Please enter a number: ");
 			}
 		}
 		return myInt;
-	}
+}
 
 	/**
 	 * @param myString the myString to set
