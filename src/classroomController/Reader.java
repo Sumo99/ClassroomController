@@ -13,8 +13,8 @@ import java.util.Scanner;
 
 class Reader {
 	static private Scanner myScanner = new Scanner(System.in);
-	static private String myString = "test";
-	static private int myInt = 0;
+	static private String myString;
+	static private int myInt;
 
 	/**
 	 * @param args
@@ -34,15 +34,11 @@ class Reader {
 	 * @return the myInt
 	 */
 	static public int getMyInt() {
-		do {
-			if (myScanner.hasNextInt()) {
-				myInt = myScanner.nextInt();
-				break;
-			} else {
-				System.out.print("Invalid entry. Please enter a number: ");
-			}
+		while (!myScanner.hasNextInt()) {
+			System.out.print("Invalid quantity. Please enter a number: ");
+			myString = myScanner.nextLine();
 		}
-		while (!myScanner.hasNextInt());
+		myInt = myScanner.nextInt();
 		return myInt;
 }
 
