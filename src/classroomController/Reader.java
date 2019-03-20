@@ -13,10 +13,11 @@ import java.util.Scanner;
 
 class Reader {
 	static private Scanner myScanner = new Scanner(System.in);
-	static private String myString;
-	static private int myInt;
+	static private String myString = "test";
+	static private int myInt = 0;
 
 	/**
+	 * Create the reader class
 	 * @param args
 	 */
 	Reader() {
@@ -31,16 +32,18 @@ class Reader {
 	}
 
 	/**
-	 * @return the myInt
+	 * @return the myInt, and loop until the user enters a valid number.
 	 */
 	static public int getMyInt() {
-		while (!myScanner.hasNextInt()) {
-			System.out.print("Invalid quantity. Please enter a number: ");
-			myString = myScanner.nextLine();
-		}
-		myInt = myScanner.nextInt();
-		return myInt;
-}
+         Scanner sc = new Scanner(System.in); // init the scanner
+         System.out.println("Enter a number of student in your classroom ");
+         while (!sc.hasNextInt()){
+            System.out.println("Enter a valid number");
+            sc.next();
+         } 
+         int myInt = sc.nextInt();
+         return myInt;
+         }
 
 	/**
 	 * @param myString the myString to set
