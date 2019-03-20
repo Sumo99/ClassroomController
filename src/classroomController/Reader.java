@@ -34,13 +34,15 @@ class Reader {
 	 * @return the myInt
 	 */
 	static public int getMyInt() {
-		try (Scanner myScanner = new Scanner(System.in)) {
+		do {
 			if (myScanner.hasNextInt()) {
 				myInt = myScanner.nextInt();
+				break;
 			} else {
-				System.out.println("Invalid entry. Please enter a number: ");
+				System.out.print("Invalid entry. Please enter a number: ");
 			}
 		}
+		while (!myScanner.hasNextInt());
 		return myInt;
 }
 
